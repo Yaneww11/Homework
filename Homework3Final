@@ -1,4 +1,3 @@
-1zad
 
 
 #include <iostream>
@@ -69,8 +68,7 @@ return 0;
 }
 
 
-
-2ZAD
+EXERSISE 2
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -119,7 +117,7 @@ int main(){
 	return 0;
 }
 
-3zad
+EXERSISE 4
 
 #include <bits/stdc++.h>
 
@@ -148,7 +146,7 @@ if(!cin){
 	return 0;
 }
 
-4zad
+EXERSISE 4
 
 #include <bits/stdc++.h>
 
@@ -179,7 +177,7 @@ print_each_digit(x);
 }
 
 
-5zad
+EXERSISE 5
 
 #include <bits/stdc++.h>
 
@@ -209,7 +207,7 @@ system("pause");
 }
 
 
-6zad
+EXERSISE 6
 
 #include <bits/stdc++.h>
 
