@@ -1,0 +1,28 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+
+double deposit = 1000;
+double p;
+int counter = 0;
+double sum = 0;
+
+cout << "Enter how much per month the deposit increases in % between 1 and 25: " << endl;
+cin >> p;
+if (!cin || p<=0 || p>=25 ){
+    cout << "Wrong input!";
+}
+do{
+    deposit = deposit + (deposit*(p/100));
+    counter++;
+    cout << deposit << endl;
+}
+while(deposit <= 1100);
+cout << "Months = " << counter << endl;
+return 0;
+
+
+}
