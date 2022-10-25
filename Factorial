@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+int n;
+int num = 1;
+int counter = 1;
+
+cout << "Enter a value: " << endl;
+cin >> n;
+while (counter <= n){
+    num *= counter;
+    counter ++;
+}
+cout << num << endl;
+
+
+return 0;
+
+
+}
