@@ -1,0 +1,28 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+double x;
+int n;
+double x1 = 1;
+double sum = 1;
+
+cout << "Enter a value for x: ";
+cin >> x;
+
+cout << "Enter a value for n: ";
+cin >>n;
+
+int counter =1;
+while (counter <=n){
+    x1 = x1*(x/counter);
+    sum = sum +x1;
+    counter++;
+}
+cout << "The sum is " << sum << endl;
+return 0;
+
+
+}
