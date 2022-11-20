@@ -1,0 +1,44 @@
+#include <iostream>
+#include<iomanip>
+
+using namespace std;
+
+int main()
+{
+int n, k;
+   int row, colum;
+   int b[20][100];
+   int random = 0;
+
+
+
+
+
+cout << "Enter a matrix A " << endl;
+   cout << "Enter n: ";
+   cin >> n;
+   cout << "Enter k: ";
+   cin >> k;
+
+
+
+   for( row = 0; row < n; row++){
+  for( colum = 0; colum < k; colum++){
+        random = 0;
+        for(int i=1; i<= n + k ; i++){
+            random = -12 + (rand() % 135);
+        }
+ b[row][colum] =random;
+
+   }
+   }
+
+    for( row = 0; row < n; row++){
+  for( colum = 0; colum < k; colum++){
+cout << setw(4) << b[row][colum];
+}
+cout << endl;
+}
+
+    return 0;
+}
