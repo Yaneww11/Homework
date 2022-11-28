@@ -1,0 +1,110 @@
+#include <iostream>
+#include <cassert>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+
+  int i, j;
+  int k =1,p = 0;
+
+  int random = 0;
+
+
+  cout << "Rows: ";
+  int row = 0;
+  cin >> row;
+  assert(row > 0);
+
+  cout << "Colums: ";
+  int col = 0;
+  cin >> col;
+  assert(col > 0);
+
+  int ** arry  = nullptr;
+  arry = new int *[row];
+  for (i = 0; i < row; i++)
+  {
+    arry[i] = new int[col];
+  }
+
+  for (i = 0; i < row; i++)
+  {
+    for (j = 0; j < col; j++)
+    {
+      for(int k=1; k<= row + col ; k++){
+            random = -12 + (rand() % 135);
+       arry[i][j] = random;
+
+    }
+  }
+  }
+
+
+  //Display the array
+  cout << "Here is your 2D Array:" << endl;
+  for (i = 0; i < row; i++)
+  {
+    for (j = 0; j < col; j++)
+    {
+
+      cout << arry[i][j] << " ";
+    }
+    cout << endl;
+  }
+  cout << endl;
+
+
+
+
+
+
+  cout << "Here is your spiral 2D Array:" << endl;
+ int row_start=0,row_end=row-1,col_start=0,col_end=col-1;
+    while(row_start<=row_end && col_start<=col_end){
+        for(int j=col_start; j<=col_end; j++){
+            cout<<arry[row_start][j]<<" ";
+        }
+        row_start++;
+        for(int i=row_start; i<=row_end; i++){
+            cout<<arry[i][col_end]<<" ";
+        }
+        col_end--;
+        for(int j=col_end; j>=col_start; j--){
+            cout<<arry[row_end][j]<<" ";
+        }
+        row_end--;
+        for(int i=row_end; i>=row_start; i--){
+            cout<<arry[i][col_start]<<" ";
+        }
+        col_start++;
+    }
+  cout << endl;
+
+
+
+
+
+    for (i = 0; i < row; i++)
+    {
+      if(arry[i])
+      {
+
+        delete[] arry[i];
+        arry[i] = nullptr;
+      }
+    }
+
+
+  cout << endl << arry << endl;
+  if(arry)
+  {
+    delete[] arry;
+    arry = nullptr;
+  }
+
+
+
+  return 0;
