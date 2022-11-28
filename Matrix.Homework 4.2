@@ -1,0 +1,80 @@
+#include <iostream>
+#include <cassert>
+
+using namespace std;
+
+int main()
+{
+
+  int i, j;
+  int random = 0;
+
+  cout << "Rows: ";
+  int row = 0;
+  cin >> row;
+  assert(row > 0);
+
+  cout << "Colums: ";
+  int col = 0;
+  cin >> col;
+  assert(col > 0);
+
+  int ** arry  = nullptr;
+  arry = new int *[row];
+  for (i = 0; i < row; i++)
+  {
+    arry[i] = new int[col];
+  }
+
+  for (i = 0; i < row; i++)
+  {
+    for (j = 0; j < col; j++)
+    {
+      for(int k=1; k<= row + col ; k++){
+            random = -12 + (rand() % 135);
+        }
+        if((i + j) < (col - 1)){
+            arry[i][j] = 0;
+        }
+        else
+       arry[i][j] = random;
+
+    }
+  }
+
+
+  //Display the array
+  cout << "Here is your 2D Array:" << endl;
+  for (i = 0; i < row; i++)
+  {
+    for (j = 0; j < col; j++)
+    {
+
+      cout << arry[i][j] << " ";
+    }
+    cout << endl;
+  }
+  cout << endl;
+
+    for (i = 0; i < row; i++)
+    {
+      if(arry[i])
+      {
+
+        delete[] arry[i];
+        arry[i] = nullptr;
+      }
+    }
+
+
+  cout << endl << arry << endl;
+  if(arry)
+  {
+    delete[] arry;
+    arry = nullptr;
+  }
+
+
+
+  return 0;
+}
